@@ -1,80 +1,115 @@
 import styles from './App.module.scss';
+import ButtonComponent from './components/Button.js';
 import { ReactComponent as ArrowDownSvg } from './svg/arrow-down.svg';
+import { ReactComponent as AutomatorIconSvg } from './svg/automator-icon.svg';
+import { ReactComponent as AutomatorSvg } from './svg/automator.svg';
+import { ReactComponent as CashappSvg } from './svg/cashapp.svg';
 import { ReactComponent as DiagramTextSvg } from './svg/diagram-text.svg';
+import { ReactComponent as DiagramSvg } from './svg/diagram.svg';
+import { ReactComponent as DiscordSvg } from './svg/discord.svg';
+import { ReactComponent as DoordashSvg } from './svg/doordash.svg';
 import { ReactComponent as FigmaTextSvg } from './svg/figma-text.svg';
 import { ReactComponent as FigmaSvg } from './svg/figma.svg';
 import { ReactComponent as HeartSvg } from './svg/heart.svg';
+import { ReactComponent as InstacartSvg } from './svg/instacart.svg';
+import { ReactComponent as LogoSvg } from './svg/logo.svg';
 import { ReactComponent as MagicCopyIconSvg } from './svg/magic-copy-icon.svg';
 import { ReactComponent as MagicIconSvg } from './svg/magic-icon.svg';
 import { ReactComponent as MagicImageIconSvg } from './svg/magic-image-icon.svg';
+import { ReactComponent as MetaSvg } from './svg/meta.svg';
+import { ReactComponent as NetflixSvg } from './svg/netflix.svg';
 import { ReactComponent as PaperIconSvg } from './svg/paper-icon.svg';
 import { ReactComponent as PenIconSvg } from './svg/pen-icon.svg';
+import { ReactComponent as PricingSvg } from './svg/pricing.svg';
+import { ReactComponent as PrototyperIconSvg } from './svg/prototyper-icon.svg';
+import { ReactComponent as PrototyperSvg } from './svg/prototyper.svg';
+import { ReactComponent as RedditSvg } from './svg/reddit.svg';
+import { ReactComponent as RobinhoodSvg } from './svg/robinhood.svg';
+import { ReactComponent as SnapchatSvg } from './svg/snapchat.svg';
 import { ReactComponent as SparklesSvg } from './svg/sparkles.svg';
 import { ReactComponent as SpellsSvg } from './svg/spells.svg';
+import { ReactComponent as StarSvg } from './svg/star.svg';
 import { ReactComponent as TextIconSvg } from './svg/text-icon.svg';
+import { ReactComponent as TwitterSvg } from './svg/twitter.svg';
 
 export default function App() {
   return (
-    <body>
-      <a href="/">
-        <img src="/" alt="logo" />
-        <h1>
-          Magician <span>beta</span>
-        </h1>
-      </a>
+    <div className={styles.app}>
+      <header className={styles.header}>
+        <div className={styles.container}>
+          <a href="/" className={styles.logo}>
+            <LogoSvg />
+            <h1>
+              Magician <span>beta</span>
+            </h1>
+          </a>
 
-      <header>
-        <nav>
-          <ul>
-            <li>
-              <a href="/">Features</a>
-            </li>
-            <li>
-              <a href="/">Pricing</a>
-            </li>
-            <li>
-              <a href="/">Install</a>
-            </li>
-            <li>
-              <a href="/">Account</a>
-            </li>
-          </ul>
-        </nav>
+          <nav className={styles.navigation}>
+            <ul>
+              <li>
+                <a href="/">Features</a>
+              </li>
+              <li>
+                <a href="/">Pricing</a>
+              </li>
+              <li>
+                <a href="/">Install</a>
+              </li>
+              <li>
+                <a href="/">Account</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
       </header>
 
       <main>
-        <section>
-          <hgroup>
-            <h1>Every little thing it does is magic</h1>
-            <p>A magical design tool for Figma powered by AI.</p>
-          </hgroup>
-          <a href="/">
-            <FigmaSvg /> Install on Figma
-          </a>
+        <section className={styles.sectionPurple}>
+          <div className={styles.container}>
+            <hgroup>
+              <h1>Every little thing it does is magic</h1>
+              <p>A magical design tool for Figma powered by AI.</p>
+            </hgroup>
 
-          <picture>
-            <img src="/img/magic-hero.jpg" alt="/" />
-          </picture>
+            <ButtonComponent href="/" variant="fancy">
+              <FigmaSvg /> Install on Figma
+            </ButtonComponent>
 
-          <a href="/">
-            <HeartSvg />
-            2.1k likes
-          </a>
-          <a href="/">
-            <ArrowDownSvg />
-            53.3k installs
-          </a>
-          <p>
-            Made by
-            <DiagramTextSvg />
-          </p>
-          <p>
-            Works with
-            <FigmaTextSvg />
-          </p>
+            <picture className={styles.picture}>
+              <img src="/img/magic-hero.jpg" alt="/" />
+            </picture>
+
+            <div className={styles.flex}>
+              <ButtonComponent href="/" variant="ghost">
+                <HeartSvg />
+                2.1k likes
+              </ButtonComponent>
+
+              <ButtonComponent href="/" variant="ghost">
+                <ArrowDownSvg />
+                53.3k installs
+              </ButtonComponent>
+            </div>
+
+            <div className={styles.flex}>
+              <p className={styles.madeby}>
+                Made by
+                <a href="/">
+                  <DiagramTextSvg />
+                </a>
+              </p>
+
+              <p className={styles.madeby}>
+                Works with
+                <a href="/">
+                  <FigmaTextSvg />
+                </a>
+              </p>
+            </div>
+          </div>
         </section>
 
-        <section>
+        <section className={styles.section}>
           <hgroup>
             <h1>
               <SpellsSvg />
@@ -85,9 +120,10 @@ export default function App() {
               generating unique icons from text.
             </p>
           </hgroup>
-          <ul>
+
+          <ul className={styles.tabs}>
             <li>
-              <a href="/">
+              <a href="#copywriting">
                 <PenIconSvg />
                 Text to Icon
               </a>
@@ -106,7 +142,8 @@ export default function App() {
             </li>
             <li>+ more</li>
           </ul>
-          <picture>
+
+          <picture className={styles.picture}>
             <img id="copywriting" src="/img/magic-copy-min.gif" alt="/" />
             <img id="text-to-image" src="/img/magic-image-min.gif" alt="/" />
           </picture>
@@ -153,31 +190,53 @@ export default function App() {
 
         <section>
           <hgroup>
-            <h1>Made by Diagram</h1>
+            <h1>
+              <DiagramSvg />
+              Made by Diagram
+            </h1>
             <p>Be more creative with smarter design tools.</p>
           </hgroup>
-          <picture>
-            <img src="/" alt="/" />
-            <img src="/" alt="/" />
-          </picture>
+          <div>
+            <h3>
+              <AutomatorIconSvg />
+              Automator
+            </h3>
+            <p>There's an automation for that</p>
+            <a href="/">Learn more</a>
+            <AutomatorSvg />
+          </div>
+          <div>
+            <h3>
+              <PrototyperIconSvg />
+              Prototyper
+            </h3>
+            <p>Powerful prototyping with code</p>
+            <a href="/">Learn more</a>
+            <PrototyperSvg />
+          </div>
           <hgroup>
             <span>Used by designers on these teams:</span>
-            <img src="/" alt="/" />
-            <img src="/" alt="/" />
-            <img src="/" alt="/" />
-            <img src="/" alt="/" />
-            <img src="/" alt="/" />
-            <img src="/" alt="/" />
-            <img src="/" alt="/" />
-            <img src="/" alt="/" />
-            <img src="/" alt="/" />
+            <TwitterSvg />
+            <NetflixSvg />
+            <SnapchatSvg />
+            <RobinhoodSvg />
+            <MetaSvg />
+            <DoordashSvg />
+            <CashappSvg />
+            <InstacartSvg />
+            <RedditSvg />
           </hgroup>
         </section>
 
         <section>
-          <h1>Pricing</h1>
+          <h1>
+            <PricingSvg />
+            Pricing
+          </h1>
           <div>
-            <span>Public beta</span>
+            <span>
+              <StarSvg /> Public beta
+            </span>
             <hgroup>
               <h3>Free</h3>
               <p>1 license, unlimited use.</p>
@@ -196,19 +255,38 @@ export default function App() {
             <h1>Get Started with Magician</h1>
             <p>A magical design tool for Figma powered by AI.</p>
           </hgroup>
-          <a href="/">Install on Figma</a>
-          <a href="/">Join the Discord</a>
+          <a href="/">
+            <FigmaSvg />
+            Install on Figma
+          </a>
+          <a href="/">
+            <DiscordSvg />
+            Join the Discord
+          </a>
           <hgroup>
-            <h3>Magician</h3>
+            <a href="/">
+              <h3>
+                <LogoSvg />
+                Magician
+              </h3>
+            </a>
             <ul>
-              <li>Support</li>
-              <li>Contact</li>
-              <li>Privacy</li>
-              <li>Terms</li>
+              <li>
+                <a href="/">Support</a>
+              </li>
+              <li>
+                <a href="/">Contact</a>
+              </li>
+              <li>
+                <a href="/">Privacy</a>
+              </li>
+              <li>
+                <a href="/">Terms</a>
+              </li>
             </ul>
           </hgroup>
         </section>
       </main>
-    </body>
+    </div>
   );
 }
