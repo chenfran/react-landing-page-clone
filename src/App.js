@@ -1,4 +1,17 @@
 import styles from './App.module.scss';
+import { ReactComponent as ArrowDownSvg } from './svg/arrow-down.svg';
+import { ReactComponent as DiagramTextSvg } from './svg/diagram-text.svg';
+import { ReactComponent as FigmaTextSvg } from './svg/figma-text.svg';
+import { ReactComponent as FigmaSvg } from './svg/figma.svg';
+import { ReactComponent as HeartSvg } from './svg/heart.svg';
+import { ReactComponent as MagicCopyIconSvg } from './svg/magic-copy-icon.svg';
+import { ReactComponent as MagicIconSvg } from './svg/magic-icon.svg';
+import { ReactComponent as MagicImageIconSvg } from './svg/magic-image-icon.svg';
+import { ReactComponent as PaperIconSvg } from './svg/paper-icon.svg';
+import { ReactComponent as PenIconSvg } from './svg/pen-icon.svg';
+import { ReactComponent as SparklesSvg } from './svg/sparkles.svg';
+import { ReactComponent as SpellsSvg } from './svg/spells.svg';
+import { ReactComponent as TextIconSvg } from './svg/text-icon.svg';
 
 export default function App() {
   return (
@@ -35,52 +48,106 @@ export default function App() {
             <h1>Every little thing it does is magic</h1>
             <p>A magical design tool for Figma powered by AI.</p>
           </hgroup>
-          <a href="/">Install on Figma</a>
-          <img src="/" alt="/" />
-          <a href="/">2.1k likes</a>
-          <a href="/">53.3k installs</a>
-          <p>Made by Works with</p>
+          <a href="/">
+            <FigmaSvg /> Install on Figma
+          </a>
+
+          <picture>
+            <img src="/img/magic-hero.jpg" alt="/" />
+          </picture>
+
+          <a href="/">
+            <HeartSvg />
+            2.1k likes
+          </a>
+          <a href="/">
+            <ArrowDownSvg />
+            53.3k installs
+          </a>
+          <p>
+            Made by
+            <DiagramTextSvg />
+          </p>
+          <p>
+            Works with
+            <FigmaTextSvg />
+          </p>
         </section>
 
         <section>
           <hgroup>
-            <h1>Wave Your Magic Wand</h1>
+            <h1>
+              <SpellsSvg />
+              Wave Your Magic Wand
+            </h1>
             <p>
               Design with the power of AI to do everything from copywriting to
               generating unique icons from text.
             </p>
           </hgroup>
           <ul>
-            <li>Text to Icon</li>
-            <li>Copywriting</li>
-            <li>Text to Image</li>
+            <li>
+              <a href="/">
+                <PenIconSvg />
+                Text to Icon
+              </a>
+            </li>
+            <li>
+              <a href="#copywriting">
+                <TextIconSvg />
+                Copywriting
+              </a>
+            </li>
+            <li>
+              <a href="#text-to-image">
+                <PaperIconSvg />
+                Text to Image
+              </a>
+            </li>
             <li>+ more</li>
           </ul>
           <picture>
-            <img src="/" alt="/" />
-            <img src="/" alt="/" />
-            <img src="/" alt="/" />
+            <img id="copywriting" src="/img/magic-copy-min.gif" alt="/" />
+            <img id="text-to-image" src="/img/magic-image-min.gif" alt="/" />
           </picture>
         </section>
 
         <section>
           <hgroup>
-            <h1>Cast Magic Spells</h1>
+            <h1>
+              <SparklesSvg />
+              Cast Magic Spells
+            </h1>
             <p>
               Each magic spell works alongside you to expand your creativity and
               imagination as you design.
             </p>
           </hgroup>
           <ul>
-            <li>Magic Icon</li>
-            <li>Magic Copy</li>
-            <li>Magic Image</li>
+            <li>
+              <a href="#magic-icon">
+                <MagicIconSvg />
+                Magic Icon
+              </a>
+            </li>
+            <li>
+              <a href="#magic-copy">
+                <MagicCopyIconSvg />
+                Magic Copy
+              </a>
+            </li>
+            <li>
+              <a href="#magic-image">
+                <MagicImageIconSvg />
+                Magic Image
+              </a>
+            </li>
             <li>+ more</li>
           </ul>
           <picture>
-            <img src="/" alt="/" />
-            <img src="/" alt="/" />
-            <img src="/" alt="/" />
+            <img id="magic-icon" src="/img/magic-icon.jpg" alt="/" />
+            <img id="magic-copy" src="/img/magic-copy.jpg" alt="/" />
+            <img id="magic-image" src="/img/magic-image.jpg" alt="/" />
           </picture>
         </section>
 
