@@ -110,85 +110,123 @@ export default function App() {
         </section>
 
         <section className={styles.section}>
-          <hgroup>
-            <h1>
-              <SpellsSvg />
-              Wave Your Magic Wand
-            </h1>
-            <p>
-              Design with the power of AI to do everything from copywriting to
-              generating unique icons from text.
-            </p>
-          </hgroup>
+          <div className={styles.container}>
+            <hgroup>
+              <h1>
+                <SpellsSvg />
+                Wave Your Magic Wand
+              </h1>
+              <p>
+                Design with the power of AI to do everything from copywriting to
+                generating unique icons from text.
+              </p>
+            </hgroup>
 
-          <ul className={styles.tabs}>
-            <li>
-              <a href="#copywriting">
-                <PenIconSvg />
-                Text to Icon
-              </a>
-            </li>
-            <li>
-              <a href="#copywriting">
-                <TextIconSvg />
-                Copywriting
-              </a>
-            </li>
-            <li>
-              <a href="#text-to-image">
-                <PaperIconSvg />
-                Text to Image
-              </a>
-            </li>
-            <li>+ more</li>
-          </ul>
+            <ul className={styles.tabs}>
+              <li>
+                <a href="#copywriting">
+                  <PenIconSvg />
+                  Text to Icon
+                </a>
+              </li>
+              <li>
+                <a href="#copywriting">
+                  <TextIconSvg />
+                  Copywriting
+                </a>
+              </li>
+              <li>
+                <a href="#text-to-image">
+                  <PaperIconSvg />
+                  Text to Image
+                </a>
+              </li>
+              <li>
+                <a href="/">+ more</a>
+              </li>
+            </ul>
 
-          <picture className={styles.picture}>
-            <img id="copywriting" src="/img/magic-copy-min.gif" alt="/" />
-            <img id="text-to-image" src="/img/magic-image-min.gif" alt="/" />
-          </picture>
+            <picture className={styles.picture}>
+              <img id="copywriting" src="/img/magic-copy-min.gif" alt="/" />
+              <img id="text-to-image" src="/img/magic-image-min.gif" alt="/" />
+            </picture>
+          </div>
         </section>
 
-        <section>
-          <hgroup>
-            <h1>
-              <SparklesSvg />
-              Cast Magic Spells
-            </h1>
-            <p>
-              Each magic spell works alongside you to expand your creativity and
-              imagination as you design.
-            </p>
-          </hgroup>
-          <ul>
-            <li>
-              <a href="#magic-icon">
-                <MagicIconSvg />
-                Magic Icon
-              </a>
-            </li>
-            <li>
-              <a href="#magic-copy">
-                <MagicCopyIconSvg />
-                Magic Copy
-              </a>
-            </li>
-            <li>
-              <a href="#magic-image">
-                <MagicImageIconSvg />
-                Magic Image
-              </a>
-            </li>
-            <li>+ more</li>
-          </ul>
-          <picture>
-            <img id="magic-icon" src="/img/magic-icon.jpg" alt="/" />
-            <img id="magic-copy" src="/img/magic-copy.jpg" alt="/" />
-            <img id="magic-image" src="/img/magic-image.jpg" alt="/" />
-          </picture>
+        <section className={styles.sectionGray}>
+          <div className={styles.container}>
+            <hgroup>
+              <h1>
+                <SparklesSvg />
+                Cast Magic Spells
+              </h1>
+              <p>
+                Each magic spell works alongside you to expand your creativity
+                and imagination as you design.
+              </p>
+            </hgroup>
+            <ul className={styles.tabs}>
+              <li>
+                <a href="#magic-icon">
+                  <MagicIconSvg />
+                  Magic Icon
+                </a>
+              </li>
+              <li>
+                <a href="#magic-copy">
+                  <MagicCopyIconSvg />
+                  Magic Copy
+                </a>
+              </li>
+              <li>
+                <a href="#magic-image">
+                  <MagicImageIconSvg />
+                  Magic Image
+                </a>
+              </li>
+              <li>
+                <a href="/">+ more</a>
+              </li>
+            </ul>
+            <picture className={styles.picture}>
+              <div className={styles.plugin}>
+                <img
+                  className={styles.automator}
+                  id="magic-icon"
+                  src="/img/magic-icon.jpg"
+                  alt="/"
+                />
+                <div className={styles.preview}>
+                  <img src="/svg/figma-background-image.svg" alt="/" />
+                </div>
+              </div>
+              <div className={styles.plugin}>
+                <img
+                  className={styles.automator}
+                  id="magic-copy"
+                  src="/img/magic-copy.jpg"
+                  alt="/"
+                />
+                <div className={styles.preview}>
+                  <img src="/svg/figma-background-image.svg" alt="/" />
+                </div>
+              </div>
+              <div className={styles.plugin}>
+                <img
+                  className={styles.automator}
+                  id="magic-image"
+                  src="/img/magic-image.jpg"
+                  alt="/"
+                />
+                <div className={styles.preview}>
+                  <img src="/svg/figma-background-image.svg" alt="/" />
+                </div>
+              </div>
+            </picture>
+          </div>
         </section>
 
-        <section>
+        <section className={styles.section}>
           <hgroup>
             <h1>
               <DiagramSvg />
@@ -228,7 +266,7 @@ export default function App() {
           </hgroup>
         </section>
 
-        <section>
+        <section className={styles.section}>
           <h1>
             <PricingSvg />
             Pricing
@@ -250,7 +288,7 @@ export default function App() {
           </div>
         </section>
 
-        <section>
+        <section className={styles.sectionTweets}>
           <hgroup>
             <h1>Get Started with Magician</h1>
             <p>A magical design tool for Figma powered by AI.</p>
@@ -263,7 +301,7 @@ export default function App() {
             <DiscordSvg />
             Join the Discord
           </a>
-          <hgroup>
+          <hgroup className={styles.navigation}>
             <a href="/">
               <h3>
                 <LogoSvg />
